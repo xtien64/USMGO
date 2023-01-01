@@ -3,6 +3,7 @@ package com.example.usmgo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,11 +19,10 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
-import java.security.Permission;
-
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    Button button;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openSignIn();
+            }
+        });
+
+        //test payment part
+        button = (Button) findViewById(R.id.button_test_payment);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), payment.class);
+                startActivity(intent);
             }
         });
     }
