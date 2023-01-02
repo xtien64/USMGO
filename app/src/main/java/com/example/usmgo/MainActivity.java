@@ -47,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //test payment part
+        button = (Button) findViewById(R.id.button_admin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), admin.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void openSignIn() {
