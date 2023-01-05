@@ -12,81 +12,89 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/abeezee"
         android:text="GoPay"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <ImageView
         android:id="@+id/image_payment1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_payment1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042"
+        app:layout_constraintVertical_bias="0.61"
         app:srcCompat="@drawable/payment" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btn_payment1"
-        android:layout_width="0dp"
+        android:layout_width="370dp"
         android:layout_height="75dp"
+        android:alpha="0.75"
+        android:background="@drawable/pop_up"
         android:drawableLeft="@drawable/cash"
         android:fontFamily="@font/abeezee"
-        android:text="PAY CASH"
+        android:onClick="showPopUp"
+        android:shadowRadius="20"
+        android:text="Pay Cash"
+        android:textAllCaps="false"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:cornerRadius="100dp"
         app:backgroundTint="@color/blue"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintTop_toBottomOf="@+id/text_payment1"
+        app:layout_constraintVertical_bias="0.062" />
+
 
     <Button
         android:id="@+id/btn_payment2"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="0dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
+        android:drawableRight="@drawable/arrow"
         android:fontFamily="@font/abeezee"
-        android:text="PAYMENT HISTORY"
+        android:text="Payment History"
         android:textAlignment="viewStart"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:drawableRight="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
+        app:layout_constraintVertical_bias="0.459" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/text_payment2"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:fontFamily="@font/abeezee"
-        android:text="Recent History"
+        android:text=" Recent Payment History"
         android:textAlignment="viewStart"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintVertical_bias="0.537" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

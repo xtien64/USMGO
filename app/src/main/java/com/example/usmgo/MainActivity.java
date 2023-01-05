@@ -20,7 +20,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button1;
+    Button button, button1, button2;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), make_payment.class);
+                startActivity(i);
+            }
+        });
+
+        //test payment
+        button2 = findViewById(R.id.button_admin);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), admin.class);
                 startActivity(i);
             }
         });

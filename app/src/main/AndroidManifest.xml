@@ -17,6 +17,27 @@
         android:theme="@style/Theme.USMGO"
         tools:targetApi="31">
         <activity
+            android:name=".admin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".pay_cash"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".history_payment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".make_payment"
             android:exported="false">
             <meta-data
